@@ -1,0 +1,63 @@
+﻿<Application
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone" xmlns:System="clr-namespace:System;assembly=mscorlib"
+    x:Class="GoodCalendar.App"
+    >
+
+    <!--Anwendungsressourcen-->
+    <Application.Resources>
+        <local:LocalizedStrings xmlns:local="clr-namespace:GoodCalendar" x:Key="LocalizedStrings"/>
+
+        <System:Double x:Key="StandardEventSize">20</System:Double>
+        <System:Double x:Key="TestLoeschen">20</System:Double>
+        <Style x:Key="TitleStyle" BasedOn="{StaticResource PhoneTextBlockBase}" TargetType="TextBlock">
+            <Setter Property="Margin" Value="20"/>
+            <Setter Property="FontSize" Value="40"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="FontFamily" Value="Segoe WP Light"/>
+            <Setter Property="Foreground" Value="White"></Setter>
+
+        </Style>
+        <Style x:Key="EventStyle" BasedOn="{StaticResource PhoneTextBlockBase}" TargetType="TextBlock">
+            <Setter Property="Margin" Value="20,0,0,0"></Setter>
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="FontFamily" Value="Segoe WP"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+        </Style>
+        <Style x:Key="EventTitleStyle" BasedOn="{StaticResource PhoneTextBlockBase}" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="35"></Setter>
+            <Setter Property="FontFamily" Value="Segoe WP Black"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+        </Style>
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="BorderBrush" Value="White"></Setter>
+        </Style>
+        <Style x:Key="RadioButtonStyle" TargetType="RadioButton">
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="BorderBrush" Value="White"></Setter>
+            <Setter Property="FontFamily" Value="Segoe WP Light"></Setter>
+            <Setter Property="Background" Value="White"></Setter>
+        </Style>
+        <Style x:Key="LineStyle" TargetType="Line">
+            <Setter Property="StrokeThickness" Value="3"></Setter>
+            <Setter Property="Margin" Value="0,10,0,10"></Setter>
+            <Setter Property="Fill" Value="White"></Setter>
+            <Setter Property="Stroke" Value="White"></Setter>
+            <Setter Property="X2" Value="500"></Setter>
+
+        </Style>
+
+    </Application.Resources>
+
+    <Application.ApplicationLifetimeObjects>
+        <!--Erforderliches Objekt, das Lebensdauerereignisse der Anwendung behandelt-->
+        <shell:PhoneApplicationService
+            Launching="Application_Launching" Closing="Application_Closing"
+            Activated="Application_Activated" Deactivated="Application_Deactivated"/>
+    </Application.ApplicationLifetimeObjects>
+
+</Application>
