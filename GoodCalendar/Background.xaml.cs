@@ -8,6 +8,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using System.Globalization;
+using System.Threading.Tasks;
 
 namespace GoodCalendar
 {
@@ -120,7 +121,12 @@ namespace GoodCalendar
         {
             buildScreen();
         }
-
         
+
+
+        private void saveScreenAsImage(object sender, System.Windows.Input.GestureEventArgs e)
+        {
+            
+        }
     }
 }
