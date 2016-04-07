@@ -44,11 +44,18 @@
         <!--TitlePanel enthält den Namen der Anwendung und den Seitentitel-->
 
         <Image Source="/Assets/Background_Images/Windows_Phone_Lockscreen.png"></Image>
+        <StackPanel>
         <TextBlock  Text="{Binding Path=LocalizedResources.ApplicationTitle, Source={StaticResource LocalizedStrings}}" Style="{StaticResource TitleStyle}"/>
-        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="20">
-            <Button Style="{StaticResource ButtonStyle}">Set!</Button>
-            <Button Tap="GotoForm" Style="{StaticResource ButtonStyle}">Configure</Button>
-            <Button Style="{StaticResource ButtonStyle}">Help</Button>
+            
+                <Line Style="{StaticResource LineStyle}"></Line>
+                <TextBlock Style="{StaticResource ResourceKey=TitleStyle}" FontSize="70">WELCOME!</TextBlock>
+                <Line Style="{StaticResource LineStyle}"></Line>
+
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" VerticalAlignment="Bottom">
+            <Button Style="{StaticResource ButtonDown}" Tap="SetLockscreen">Set!</Button>
+            <Button Tap="GotoForm" Style="{StaticResource ButtonDown}">Configure</Button>
+            <Button Style="{StaticResource ButtonDown}">Help</Button>
         </StackPanel>
         <!--Auskommentieren, um ein Ausrichtungsraster anzuzeigen und sicherzustellen, dass Ihre Steuerelemente
             an den allgemeinen Grenzen ausgerichtet sind.  Das Bild hat oben einen Rand von -32 px wegen

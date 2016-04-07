@@ -108,8 +108,9 @@
                 <TextBlock  x:Name="ExampleEvent" Text="Meeting the Grandparents (10:30)" Style="{StaticResource EventStyle}"/>
 
             </StackPanel>
-            <Button Tap="Button_Tap" Margin="50" Content="Preview!" Style="{StaticResource ButtonStyle}"/>
+            
         </StackPanel>
+        <Button Tap="Button_Tap" Content="Preview!" Style="{StaticResource ButtonDown}"/>
         <!--<Image Source="/Assets/AlignmentGrid.png" VerticalAlignment="Top" Height="800" Width="480" Margin="0,-32,0,0" Grid.Row="0" Grid.RowSpan="2" IsHitTestVisible="False" />-->
     </Grid>
 

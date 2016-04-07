@@ -67,9 +67,9 @@ namespace GoodCalendar
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void SetLockscreen(object sender, System.Windows.Input.GestureEventArgs e)
         {
-
+            //Lockhelper
             LockHelper(@"Assets/Background_Images/Windows_Phone_Lockscreen.png", true);
             Appointments appts = new Appointments();
             appts.SearchCompleted += new EventHandler<AppointmentsSearchEventArgs>(Appointments_SearchCompleted);
@@ -110,10 +110,11 @@ namespace GoodCalendar
 
             if (lockscreenValueExists)
             {
-                NavigationService.Navigate(new Uri("/Settings.xaml"));
+                NavigationService.Navigate(new Uri("/Settings.xaml", UriKind.Relative));
             }
         }
 
+       
 
 
         // Beispielcode zur Erstellung einer lokalisierten ApplicationBar

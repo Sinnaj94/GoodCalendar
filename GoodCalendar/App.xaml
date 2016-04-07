@@ -36,6 +36,12 @@
             <Setter Property="Foreground" Value="White"></Setter>
             <Setter Property="BorderBrush" Value="White"></Setter>
         </Style>
+        <Style x:Key="ButtonDown" TargetType="Button">
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="BorderBrush" Value="White"></Setter>
+            <Setter Property="VerticalAlignment" Value="Bottom"></Setter>
+            <Setter Property="Margin" Value="20"></Setter>
+        </Style>
         <Style x:Key="RadioButtonStyle" TargetType="RadioButton">
             <Setter Property="Foreground" Value="White"></Setter>
             <Setter Property="BorderBrush" Value="White"></Setter>

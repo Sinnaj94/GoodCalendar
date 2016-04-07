@@ -79,7 +79,7 @@
 
 
         </StackPanel>
-        <Button Tap="saveScreenAsImage"  Margin="30,0,30,30" Background="Transparent" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Bottom" Height="72">Save to Gallery</Button>
+        <Button Tap="saveScreenAsImage"  Style="{StaticResource  ButtonDown}">Save to Gallery</Button>
 
         <!--ContentPanel - zusätzliche Inhalte hier platzieren-->
 
